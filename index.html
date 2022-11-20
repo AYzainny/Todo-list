@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>TO DO LIST</title>
+	<link rel="stylesheet" type="text/css"  href="style.css">
+ </head>
+ <body>
+	<div id=MyDiv class=header>
+	  <h1>My to-do list</h1>
+      <p><em>click an item once to mark it complete</em></p>
+
+	  <input type="text" id="input">
+	  <button id="addButton" class="addBtn">ADD</button>
+	  <ol id="todo-list">
+		 <li>Exercise</li>
+		 <li>Get some chores done</li>
+		 <li>Pray</li>
+		 <li>Study some javascript</li>
+	  </ol>
+	   <button type="clear" id="clearCompletedBtn" class="clearBtn" value="Clear completed"> clear completed</button>
+	   <button type="reset" id="emptyBtn" class="empty" value="reset"> reset</button>
+	   <button type="save" id="saveBtn" class="save" onclick="saveListTest()" >Save</button>
+
+    </div>
+ <script type="text/javascript"  src="script.js"></script>
+ </body>
+</html>
