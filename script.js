@@ -38,20 +38,55 @@ var toDoInfo = {
 const clear = document.getElementById("clearCompletedBtn");
 
 clear.addEventListener("click", function(){
-    alert("clear button clicked");
+    var checkedItems = document.getElementsByClassName("checked");
+
+    while (checkedItems.length > 0) {
+        checkedItems.item(0).remove();
+    }
+
 });
 
 
 const reset = document.getElementById("emptyBtn");
 
 reset.addEventListener("click", function(){
-    alert("reset button clicked");
-});
+    var toDoItems = ol.children;
+    while (toDoItems.length > 0) {
+        toDoItems.item(0).remove();
+    }
 
+ });
 
 
 const save = document.getElementById("saveBtn");
 
 save.addEventListener("click", function(){
     alert("save button clicked");
+    var toDos = [];
+
+    for (var i = 0; i < ol.children.length; i++) {
+        var toDo = ol.children.item(i);
+
+        var toDoInfo = {
+            "task": toDo.innerText,
+            "checked": toDo.classList.contains("checked")
+        };
+
+        toDos.push(toDoInfo);
+
+    }
+
+    localStorage.setItem("toDos", JSON.stringify(toDos));
 });
+
+function loadList() {
+    if (localStorage.getItem("toDos") != null) {
+        var toDos = JSON.parse(localStorage.getItem("toDos"));
+
+        for (var i = 0; i < ol.length; i++) {
+            var toDo = toDos[i];
+            newToDoItem(toDo.task, toDo.completed);
+        }
+    }
+};
+loadList();
