@@ -61,7 +61,6 @@ reset.addEventListener("click", function(){
 const save = document.getElementById("saveBtn");
 
 save.addEventListener("click", function(){
-    alert("save button clicked");
     var toDos = [];
 
     for (var i = 0; i < ol.children.length; i++) {

@@ -3,27 +3,28 @@ p{
 }
 input{
  
-    box-sizing: border-box;
-    box-shadow: 0px 0px 0px 0px;
-    border-radius: 50px;  
-    padding: 5px;
-    font-style: normal;
-    width: 50%;
-    font-size: 13px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 0px;
+  border-radius: 50px;  
+  padding: 5px;
+  font-style: normal;
+  width: 50%;
+  font-size: 10px;
     
 }
-.MyDiv{
-	justify-content: center;
-  width: 100%;
-  height: 200%;
-  
+.mydiv{
+ justify-content: center; 
+ height: 300px;
+ width: 400px;
 }
-
 
 body{
     margin: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
     background-color: green;
 }
+
 h1{
   background-color: green;
 }
