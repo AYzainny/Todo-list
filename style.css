@@ -17,6 +17,11 @@ input{
  height: 300px;
  width: 400px;
 }
+.header{
+    flex-wrap: wrap;
+
+  justify-content: center;
+}
 
 body{
     margin: 150px;

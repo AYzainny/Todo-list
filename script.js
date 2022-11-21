@@ -84,7 +84,7 @@ function loadList() {
 
         for (var i = 0; i < ol.length; i++) {
             var toDo = toDos[i];
-            newToDoItem(toDo.task, toDo.completed);
+            newToDoItem(toDos.task, toDo.checked);
         }
     }
 };
