@@ -73,18 +73,18 @@ save.addEventListener("click", function(){
 
         toDos.push(toDoInfo);
 
-    }
+    };
 
-    localStorage.setItem("toDos", JSON.stringify(toDos));
+    localStorage.setItem("toDo", JSON.stringify(toDos));
 });
 
 function loadList() {
-    if (localStorage.getItem("toDos") != null) {
-        var toDos = JSON.parse(localStorage.getItem("toDos"));
+    if (localStorage.getItem("toDo") != null) {
+        var toDo = JSON.parse(localStorage.getItem("toDo"));
 
         for (var i = 0; i < ol.length; i++) {
-            var toDo = toDos[i];
-            newToDoItem(toDos.task, toDo.checked);
+            var toDo = toDo[i];
+            newToDoItem(toDo.task, toDo.checked);
         }
     }
 };
